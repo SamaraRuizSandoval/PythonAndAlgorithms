@@ -17,7 +17,7 @@ def test_contains_duplicate_v2():
     assert contains_duplicate_v2([1, 2, 3, 1]) == True
     assert contains_duplicate_v2([3, 2, 6, -1, 2, 1]) == True
 
-# def test_find_difference_array():
-#     assert find_difference_array([2, 5, 1, 6, 1]) == [13, 6, 0, 7, 14]
-#     assert find_difference_array([3, 3, 3]) == [6, 0, 6]
-#     assert find_difference_array([1, 2, 3, 4, 5]) == [14, 11, 6, 1, 10]
+def test_find_difference_array():
+    assert find_difference_array([2, 5, 1, 6, 1]) == [13, 6, 0, 7, 14]
+    assert find_difference_array([3, 3, 3]) == [6, 0, 6]
+    assert find_difference_array([1, 2, 3, 4, 5]) == [14, 11, 6, 1, 10]

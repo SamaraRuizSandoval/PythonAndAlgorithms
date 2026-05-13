@@ -1,3 +1,4 @@
+import math
 
 #? The running sum at position i in the new array is calculated as the sum of all the numbers 
 #? in the original array from the 0th index up to the i-th index (inclusive).
@@ -45,4 +46,24 @@ def contains_duplicate_v2(nums):
 # - For i=0: |(0) - (5+1+6+1)| = |0 - 13| = 13
 # - For i=1: |(2) - (1+6+1)| = |2 - 8| = 6
 def find_difference_array(nums):
-    pass
+    difference_array = []
+
+    for i, num in enumerate(nums):
+
+        left_side_sum = 0
+        right_side_sum = 0
+
+        # Left side
+        for j in range(i - 1, -1, -1):
+            left_side_sum += nums[j]
+
+        # Right side
+        for j in range(i + 1, len(nums)):
+            right_side_sum += nums[j]
+
+        result = abs(left_side_sum - right_side_sum)
+
+        difference_array.append(result)
+
+    return difference_array
+
