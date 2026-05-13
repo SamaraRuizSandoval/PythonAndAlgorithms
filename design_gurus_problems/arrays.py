@@ -1,0 +1,35 @@
+
+#? The running sum at position i in the new array is calculated as the sum of all the numbers 
+#? in the original array from the 0th index up to the i-th index (inclusive).
+# Example 1:
+# Input: nums = [1,2,3,4]
+# Output: [1,3,6,10]
+def running_sum(nums):
+    new_list = []
+    sum = 0
+    for num in nums:
+        sum = sum + num
+        new_list.append(sum)
+    
+    return new_list
+
+#? Given an integer array nums, return true if any value appears at least twice in the array, 
+#? and return false if every element is distinct.
+# Input: [1,2,3,4]
+# Output: false
+def contains_duplicate(nums):  # Brute force approach
+    for i, num in enumerate(nums):
+        for j in range(i + 1, len(nums)): # Start checking AFTER the current index
+            if num == nums[j]:
+                return True
+
+    return False
+
+def contains_duplicate_v2(nums):
+    seen_nums_dict = {}
+    for num in nums:
+        #check that a num exists in dictionary
+        if num in seen_nums_dict:
+            return True
+        else:
+            seen_nums_dict[num] = 1
