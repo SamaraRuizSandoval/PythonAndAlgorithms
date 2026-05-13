@@ -67,3 +67,18 @@ def find_difference_array(nums):
 
     return difference_array
 
+#? You are given an mxn matrix accounts where accounts[i][j] is the amount of money the ith customer
+# has in the jth bank
+# Return the wealth that the richest customer has 
+
+def maximum_wealth(accounts):
+    max_wealth = 0
+    for customer_accounts in accounts:
+        wealth = 0
+        for money in customer_accounts:
+            wealth += money
+
+        if wealth > max_wealth:
+            max_wealth = wealth
+            
+    return max_wealth
