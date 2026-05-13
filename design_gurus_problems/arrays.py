@@ -33,3 +33,16 @@ def contains_duplicate_v2(nums):
             return True
         else:
             seen_nums_dict[num] = 1
+    return False
+
+#? Given an input array of integers nums, find an integer array, let's call it differenceArray, 
+#? of the same length as an input integer array.
+# differenceArray[i] = | leftSumi - rightSumi |
+# Input: [2, 5, 1, 6, 1]
+# Output: [13, 6, 0, 7, 14]
+
+# Explanation:
+# - For i=0: |(0) - (5+1+6+1)| = |0 - 13| = 13
+# - For i=1: |(2) - (1+6+1)| = |2 - 8| = 6
+def find_difference_array(nums):
+    pass
